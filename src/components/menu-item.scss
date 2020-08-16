@@ -1,0 +1,50 @@
+.card{
+    border:1px solid rgb(0, 0, 0);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #fff;
+        margin: 10% auto;
+        height: 90px;
+        width: 45%;
+        background-color: #ccc;
+        opacity:0.7;
+        color: black;
+        cursor: pointer;
+        
+    }
+    
+    &:hover{
+        cursor: pointer;
+        & .background-image{
+            transform:scale(1.1);
+            transition:transform 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 
+        }
+    }
+    &:first-child{
+        grid-row: 1/4;
+        .content{
+            margin-top: 50%;;
+        }
+    }
+    &:last-child{
+        grid-column: 2/4;
+    }
+
+    .background-image{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left:0;
+    }   
+}
